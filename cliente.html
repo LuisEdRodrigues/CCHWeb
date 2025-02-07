@@ -26,7 +26,137 @@
         <i class="bi-geo-alt-fill" style="color: hsl(0, 88%, 60%)"></i> Dois
         Vizinhos - Paraná
       </div>
-      <button class="btn btn-primary m-4">Fazer Reserva</button>
+      <button
+        class="btn btn-primary m-4"
+        data-bs-toggle="modal"
+        data-bs-target="#reservaModal"
+      >
+        Fazer Reserva
+      </button>
+    </div>
+
+    <div
+      class="modal fade"
+      id="reservaModal"
+      tabindex="-1"
+      aria-labelledby="reservaModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="dataModalLabel">Faça Sua Reserva</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row">
+                <!-- Data de Entrada -->
+                <div class="col-md-6">
+                  <h6 class="text-center">Entrada</h6>
+                  <div class="row g-1">
+                    <div class="col-4">
+                      <label for="diaEntrada" class="form-label small"
+                        >Dia</label
+                      >
+                      <select
+                        class="form-select form-select-sm"
+                        id="diaEntrada"
+                      ></select>
+                    </div>
+                    <div class="col-4">
+                      <label for="mesEntrada" class="form-label small"
+                        >Mês</label
+                      >
+                      <select
+                        class="form-select form-select-sm"
+                        id="mesEntrada"
+                      >
+                        <option value="1">Jan</option>
+                        <option value="2">Fev</option>
+                        <option value="3">Mar</option>
+                        <option value="4">Abr</option>
+                        <option value="5">Mai</option>
+                        <option value="6">Jun</option>
+                        <option value="7">Jul</option>
+                        <option value="8">Ago</option>
+                        <option value="9">Set</option>
+                        <option value="10">Out</option>
+                        <option value="11">Nov</option>
+                        <option value="12">Dez</option>
+                      </select>
+                    </div>
+                    <div class="col-4">
+                      <label for="anoEntrada" class="form-label small"
+                        >Ano</label
+                      >
+                      <select
+                        class="form-select form-select-sm"
+                        id="anoEntrada"
+                      ></select>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Data de Saída -->
+                <div class="col-md-6">
+                  <h6 class="text-center">Saída</h6>
+                  <div class="row g-1">
+                    <div class="col-4">
+                      <label for="diaSaida" class="form-label small">Dia</label>
+                      <select
+                        class="form-select form-select-sm"
+                        id="diaSaida"
+                      ></select>
+                    </div>
+                    <div class="col-4">
+                      <label for="mesSaida" class="form-label small">Mês</label>
+                      <select class="form-select form-select-sm" id="mesSaida">
+                        <option value="1">Jan</option>
+                        <option value="2">Fev</option>
+                        <option value="3">Mar</option>
+                        <option value="4">Abr</option>
+                        <option value="5">Mai</option>
+                        <option value="6">Jun</option>
+                        <option value="7">Jul</option>
+                        <option value="8">Ago</option>
+                        <option value="9">Set</option>
+                        <option value="10">Out</option>
+                        <option value="11">Nov</option>
+                        <option value="12">Dez</option>
+                      </select>
+                    </div>
+                    <div class="col-4">
+                      <label for="anoSaida" class="form-label small">Ano</label>
+                      <select
+                        class="form-select form-select-sm"
+                        id="anoSaida"
+                      ></select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button type="button" class="btn btn-primary">
+              Realizar Reserva
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="py-5 bg-body-secondary">
