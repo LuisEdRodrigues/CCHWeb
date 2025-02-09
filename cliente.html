@@ -12,21 +12,48 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <link rel="stylesheet" href="style.css" />
-
     <title>Hotel</title>
   </head>
 
-  <body>
-    <div class="py-3 text-center">
-      <i class="bi-house" style="font-size: 4rem"></i>
-      <div class="display-5 fw-semibold text-body-emphasis mb-2">
-        Nome do Hotel
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Hotel</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#servicos">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#quartos">Quartos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#reserva">Reservas</a>
+          </li>
+        </ul>
       </div>
-      <div class="lead">
+    </div>
+  </nav>
+
+  <body>
+    <div class="py-5 text-center mt-2">
+      <div>
+        <i class="bi-house" style="font-size: 4rem"></i>
+        <p class="display-5 fw-semibold text-body-emphasis mb-2">
+          Nome do Hotel
+        </p>
+        <p class="lead">Descrição do Hotel</p>
+      </div>
+      <div class="ratio ratio-4x3 w-50 mx-auto">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40266.826244254196!2d-42.73632693859762!3d-10.827280548799136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x765921521a3a289%3A0xd0bc236aee3dda01!2sXique-Xique%2C%20BA%2C%2047400-000!5e0!3m2!1spt-BR!2sbr!4v1739099219910!5m2!1spt-BR!2sbr"
-          width="450"
-          height="300"
           style="border: 0"
           allowfullscreen=""
           loading="lazy"
@@ -34,9 +61,10 @@
         ></iframe>
       </div>
       <button
-        class="btn btn-primary m-4"
+        class="btn btn-primary m-4 fs-5 fw-semibold"
         data-bs-toggle="modal"
         data-bs-target="#reservaModal"
+        style="width: 10em;"
       >
         Fazer Reserva
       </button>
@@ -63,7 +91,6 @@
           <div class="modal-body">
             <form>
               <div class="row">
-                <!-- Data de Entrada -->
                 <div class="col-md-6">
                   <h6 class="text-center">Entrada</h6>
                   <div class="row g-1">
@@ -110,7 +137,6 @@
                   </div>
                 </div>
 
-                <!-- Data de Saída -->
                 <div class="col-md-6">
                   <h6 class="text-center">Saída</h6>
                   <div class="row g-1">
@@ -166,136 +192,131 @@
       </div>
     </div>
 
-    <div class="py-5 bg-body-secondary">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 text-center mb-4">
-            <p class="display-6">Serviços e Fotos:</p>
-          </div>
-        </div>
+    <div id="servicos" class="py-5 bg-purple">
+      <div class="container text-center">
+        <p class="display-6">Serviços e Fotos:</p>
 
         <div
-          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 justify-content-center"
+          id="carouselServicos"
+          class="carousel slide"
+          data-bs-ride="carousel"
         >
-          <div class="col">
-            <div class="card shadow-sm p-0">
-              <img src="placeholder.jpg" class="img-fluid rounded" />
-              <div class="card-body">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Dolorum repellendus necessitatibus ab repellat, vel beatae nobis
-                fuga voluptatum!
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="placeholder.jpg"
+                class="w-100 rounded"
+                alt="Serviço 1"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <p>Descrição do serviço 1.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="placeholder.jpg"
+                class="w-100 rounded"
+                alt="Serviço 2"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <p>Descrição do serviço 2.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="placeholder.jpg"
+                class="w-100 rounded"
+                alt="Serviço 3"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <p>Descrição do serviço 3.</p>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card shadow-sm p-0">
-              <img src="placeholder.jpg" class="img-fluid rounded" />
-              <div class="card-body">
-                Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no
-                gatis, per gatis num morreus.Copo furadis é disculpa de bebadis,
-                arcu quam euismod magna.Admodum accumsan disputationi eu sit.
-                Vide electram sadipscing et per.Aenean aliquam molestie leo,
-                vitae iaculis nisl. Quem num gosta di mé, boa gentis num
-                é.Paisis, filhis, espiritis santis.Mais vale um bebadis
-                conhecidiss, que um alcoolatra anonimis.Si u mundo tá muito
-                paradis? Toma um mé que o mundo vai girarzis! Casamentiss faiz
-                malandris se pirulitá.Copo furadis é disculpa de bebadis, arcu
-                quam euismod magna.Detraxit consequat et quo num tendi
-                nada.Cevadis im ampola pa arma uma pindureta. Quem num gosta di
-                mé, boa gentis num é.Posuere libero varius. Nullam a nisl ut
-                ante blandit hendrerit. Aenean sit amet nisi.Todo mundo vê os
-                porris que eu tomo, mas ninguém vê os tombis que eu levo!Si num
-                tem leite então bota uma pinga aí cumpadi! Praesent vel viverra
-                nisi. Mauris aliquet nunc non turpis scelerisque, eget.Praesent
-                malesuada urna nisi, quis volutpat erat hendrerit non. Nam
-                vulputate dapibus.Copo furadis é disculpa de bebadis, arcu quam
-                euismod magna.Detraxit consequat et quo num tendi nada. Si u
-                mundo tá muito paradis? Toma um mé que o mundo vai girarzis!Suco
-                de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e
-                fermentis.Quem num gosta di mim que vai caçá sua
-                turmis!Interessantiss quisso pudia ce receita de bolis, mais
-                bolis eu num gostis.
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm p-0">
-              <img src="placeholder.jpg" class="img-fluid rounded" />
-              <div class="card-body">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Dolorum repellendus necessitatibus ab repellat, vel beatae nobis
-                fuga voluptatum!
-              </div>
-            </div>
-          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselServicos"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselServicos"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
         </div>
       </div>
     </div>
 
     <div class="py-5">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 text-center mb-4">
-            <p class="display-6">Tipos de Quartos:</p>
-          </div>
-        </div>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-          <div class="col">
-            <div class="card shadow-sm p-0">
-              <img src="placeholder.jpg" class="img-fluid rounded" />
-              <div class="card-body">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Dolorum repellendus necessitatibus ab repellat, vel beatae nobis
-                fuga voluptatum! Quam, minus sed! Minima ducimus voluptate rem
-                veniam iste quasi repudiandae officiis.
+      <div class="container text-center">
+        <p class="display-6">Tipos de Quartos:</p>
+
+        <div
+          id="carouselQuartos"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="placeholder.jpg"
+                class="w-100 rounded"
+                alt="Quarto 1"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <p>Descrição do Quarto 1.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="placeholder.jpg"
+                class="w-100 rounded"
+                alt="Quarto 2"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <p>Descrição do Quarto 2.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="placeholder.jpg"
+                class="w-100 rounded"
+                alt="Quarto 3"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <p>Descrição do Quarto 3.</p>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card shadow-sm p-0">
-              <img src="placeholder.jpg" class="img-fluid rounded" />
-              <div class="card-body">
-                Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no
-                gatis, per gatis num morreus.Copo furadis é disculpa de bebadis,
-                arcu quam euismod magna.Admodum accumsan disputationi eu sit.
-                Vide electram sadipscing et per.Aenean aliquam molestie leo,
-                vitae iaculis nisl. Quem num gosta di mé, boa gentis num
-                é.Paisis, filhis, espiritis santis.Mais vale um bebadis
-                conhecidiss, que um alcoolatra anonimis.Si u mundo tá muito
-                paradis? Toma um mé que o mundo vai girarzis! Casamentiss faiz
-                malandris se pirulitá.Copo furadis é disculpa de bebadis, arcu
-                quam euismod magna.Detraxit consequat et quo num tendi
-                nada.Cevadis im ampola pa arma uma pindureta. Quem num gosta di
-                mé, boa gentis num é.Posuere libero varius. Nullam a nisl ut
-                ante blandit hendrerit. Aenean sit amet nisi.Todo mundo vê os
-                porris que eu tomo, mas ninguém vê os tombis que eu levo!Si num
-                tem leite então bota uma pinga aí cumpadi! Praesent vel viverra
-                nisi. Mauris aliquet nunc non turpis scelerisque, eget.Praesent
-                malesuada urna nisi, quis volutpat erat hendrerit non. Nam
-                vulputate dapibus.Copo furadis é disculpa de bebadis, arcu quam
-                euismod magna.Detraxit consequat et quo num tendi nada. Si u
-                mundo tá muito paradis? Toma um mé que o mundo vai girarzis!Suco
-                de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e
-                fermentis.Quem num gosta di mim que vai caçá sua
-                turmis!Interessantiss quisso pudia ce receita de bolis, mais
-                bolis eu num gostis.
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm p-0">
-              <img src="placeholder.jpg" class="img-fluid rounded" />
-              <div class="card-body">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Dolorum repellendus necessitatibus ab repellat, vel beatae nobis
-                fuga voluptatum! Quam, minus sed! Minima ducimus voluptate rem
-                veniam iste quasi repudiandae officiis.
-              </div>
-            </div>
-          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselQuartos"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselQuartos"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
         </div>
       </div>
     </div>
+
+    <footer class="py-4 bg-purple text-center">
+      <p class="mb-0">© 2025 Nome do Hotel - Todos os direitos reservados.</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>

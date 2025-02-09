@@ -1,0 +1,36 @@
+:root {
+    --cor-roxo: #6a0dad;
+    --cor-roxo-claro: #8a2be2;
+    --cor-branca: #ffffff;
+  }
+
+  .navbar {
+    background-color: var(--cor-roxo);
+  }
+  .navbar-brand,
+  .nav-link {
+    color: var(--cor-branca) !important;
+  }
+  .nav-link:hover {
+    color: var(--cor-roxo-claro) !important;
+  }
+
+  .btn-primary {
+    background-color: var(--cor-roxo);
+    border-color: var(--cor-roxo);
+  }
+  .btn-primary:hover {
+    background-color: var(--cor-roxo-claro);
+    border-color: var(--cor-roxo-claro);
+  }
+
+  .bg-purple {
+    background-color: var(--cor-roxo);
+    color: var(--cor-branca);
+  }
+
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+  }
