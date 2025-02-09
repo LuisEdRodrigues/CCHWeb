@@ -1,6 +1,6 @@
 - ### R1. Peso 3 - Ter responsividade em todas as páginas.
 - ### R2. Peso 1- Utilizar JavaScript para manipular o DOM pelo menos em duas partesdo código.
-- ### R3. Peso 1 - Apresentar a localização do hotel utilizando um iframe do google maps – utilize uma localização fictícia.
+- ### ~~R3. Peso 1 - Apresentar a localização do hotel utilizando um iframe do google maps – utilize uma localização fictícia.~~
 - ### R4. Peso 1 - Apresentar uma funcionalidade referente a reserva do hotel pelos clientes.
 - ### R5. Peso 1 - Apresentar fotos do hotel, listagem de serviços prestados pelo hotel e tipos de quartos disponíveis.
 - ### R6. Peso 1 – Ter tela que permita que o administrador gerencie (adicione e remova) as fotos do hotel que aparecem no site.
